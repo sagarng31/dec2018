@@ -1,0 +1,26 @@
+<hr>
+<h1>{{title}}</h1>
+
+{{studentModel.value | json}}
+<form #studentModel="ngForm">
+    <div class="form-group">
+        <label for="name">Name :</label>
+        <input type="text" #nameVal="ngModel" name="txtname" class="form-control" [(ngModel)]="Name" required />
+    </div>
+    <div class="alert alert-danger" [hidden]="nameVal.valid">Name is required.</div>
+    <div class="form-group">
+        <label for="email">Email :</label>
+        <input type="email" name="txtemail" class="form-control" [(ngModel)]="Email" />
+    </div>
+    <div class="form-group">
+        <label for="city">City :</label>
+        <input type="text" name="txtcity" class="form-control" [(ngModel)]="City" />
+    </div>
+    <div class="form-group">
+        <label for="pin">Pin :</label>
+        <input type="text" name="txtpin" class="form-control" [(ngModel)]="Pin" />
+    </div>
+    <div class="form-group">
+        <button class="btn btn-primary" type="submit" (click)="saveStudent(studentModel.value)">Save Student</button>
+    </div>
+</form>

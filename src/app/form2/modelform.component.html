@@ -1,0 +1,22 @@
+<div class="container">
+    <div class="col-md-6">
+        <h1>{{title}}</h1>
+        {{studentModel.value|json}}
+        <form [formGroup]="studentModel" novalidate>
+            <div class="form-group">
+                <label for="Name">Name</label>
+                <input type="text" class="form-control" formControlName="name" />
+            </div>
+            <div class="alert alert-danger" *ngIf="studentModel.controls['name'].hasError('required')">Name is required.</div>
+            <div class="form-group">
+                <label for="Email">Email</label>
+                <input type="text" class="form-control" formControlName="email" />
+            </div>
+            <div class="form-group">
+                <label for="Zip">ZIP</label>
+                <input type="text" class="form-control" formControlName="zip" />
+            </div>
+            <button type="submit" class="btn btn-primary" (click)=saveStudent(studentModel.value)>Save</button>
+        </form>
+    </div>
+</div>
