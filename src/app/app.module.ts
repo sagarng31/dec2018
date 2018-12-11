@@ -10,6 +10,7 @@ import { TestComponent } from './test.component';
 import { CubePipe } from './pipe/cube.pipe';
 import { templateFormComponent } from './form/templateform.component';
 import { modelFormComponent } from './form2/modelform.component';
+import { StudentComponentServ } from './services/student.component';
 
 @NgModule({
   // will have Component, Pipe or Directive
@@ -21,7 +22,8 @@ import { modelFormComponent } from './form2/modelform.component';
     TestComponent,
     CubePipe,
     templateFormComponent,
-    modelFormComponent
+    modelFormComponent,
+    StudentComponentServ
   ],
   // will have Modules only
   imports: [
@@ -31,6 +33,6 @@ import { modelFormComponent } from './form2/modelform.component';
   ],
   // will have services only
   providers: [],
-  bootstrap: [modelFormComponent]
+  bootstrap: [StudentComponentServ]
 })
 export class AppModule { }
