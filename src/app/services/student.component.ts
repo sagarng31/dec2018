@@ -12,11 +12,11 @@ export class StudentComponentServ{
 
     public studentInfo;
 
-    constructor(private st: studentService){
+    constructor(private kahipannavde: studentService){
 
     }
 
     public showStudent(){
-        this.studentInfo = this.st.getStudent();
+        this.studentInfo = this.kahipannavde.getStudent();
     }
 }
