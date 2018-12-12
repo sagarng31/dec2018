@@ -6,7 +6,7 @@
     <hr>
     <button type="submit" (click)="showCountries()" class="btn btn-primary">Get Countries Info</button>
     <!-- <h4>{{countryInfo|json}}</h4> -->
-    <table>
+    <table class="table">
         <thead>
             <tr>
                 <th>Name</th>
@@ -19,8 +19,8 @@
             <tr *ngFor="let ct of countryInfo">
                 <td>{{ct.name}}</td>
                 <td>{{ct.capital}}</td>
-                <td></td>
-                <td></td>
+                <td>{{ct.currencies[0].code}}</td>
+                <td>{{ct.flag}}</td>
             </tr>
         </tbody>
     </table>
