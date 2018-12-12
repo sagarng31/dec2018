@@ -5,5 +5,23 @@
     <button type="submit" (click)="showStudent()" class="btn btn-primary">Get Info</button>
     <hr>
     <button type="submit" (click)="showCountries()" class="btn btn-primary">Get Countries Info</button>
-    <h4>{{countryInfo|json}}</h4>
+    <!-- <h4>{{countryInfo|json}}</h4> -->
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Capital</th>
+                <th>Currency</th>
+                <th>Flag</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let ct of countryInfo">
+                <td>{{ct.name}}</td>
+                <td>{{ct.capital}}</td>
+                <td></td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
 </div>
