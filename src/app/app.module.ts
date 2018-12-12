@@ -11,6 +11,7 @@ import { CubePipe } from './pipe/cube.pipe';
 import { templateFormComponent } from './form/templateform.component';
 import { modelFormComponent } from './form2/modelform.component';
 import { StudentComponentServ } from './services/student.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   // will have Component, Pipe or Directive
@@ -29,7 +30,8 @@ import { StudentComponentServ } from './services/student.component';
   imports: [
     BrowserModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   // will have services only
   providers: [],
