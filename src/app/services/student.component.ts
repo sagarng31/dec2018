@@ -25,4 +25,13 @@ export class StudentComponentServ{
     public showCountries(){
         this.countryInfo = this.cts.getCountries();
     }
+
+    public studentDetails;
+    public saveStudentInfo(){
+        const data = {
+            name :'Pravin',
+            job : 'Doctor'
+        }
+        this.studentDetails=this.kahipannavde.saveStudent(data)
+    }
 }
