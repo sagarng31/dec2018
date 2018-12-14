@@ -12,6 +12,8 @@ import { templateFormComponent } from './form/templateform.component';
 import { modelFormComponent } from './form2/modelform.component';
 import { StudentComponentServ } from './services/student.component';
 import { HttpClientModule } from '@angular/common/http';
+import { parentComm } from './component-communication/parent.component';
+import { childComm } from './component-communication/child.component';
 
 @NgModule({
   // will have Component, Pipe or Directive
@@ -24,7 +26,9 @@ import { HttpClientModule } from '@angular/common/http';
     CubePipe,
     templateFormComponent,
     modelFormComponent,
-    StudentComponentServ
+    StudentComponentServ,
+    parentComm,
+    childComm
   ],
   // will have Modules only
   imports: [
@@ -35,6 +39,6 @@ import { HttpClientModule } from '@angular/common/http';
   ],
   // will have services only
   providers: [],
-  bootstrap: [StudentComponentServ]
+  bootstrap: [parentComm]
 })
 export class AppModule { }
