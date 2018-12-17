@@ -5,6 +5,11 @@
     <!-- <child-comp [name1]="'Sagar Patil, Pune'"></child-comp> -->
     <child-comp [name1]="myOrg" (send)="receiveInfo($event)"></child-comp>
     <hr>
+    <hr>
+    <h1>View Child Demo</h1>
+    <viewchild-comp></viewchild-comp>
+    <hr>
+    <button type="submit" (click)="sendDatatoViewChild()">Send to Child</button>
 </div>
 
 

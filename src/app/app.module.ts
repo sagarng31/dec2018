@@ -14,6 +14,7 @@ import { StudentComponentServ } from './services/student.component';
 import { HttpClientModule } from '@angular/common/http';
 import { parentComm } from './component-communication/parent.component';
 import { childComm } from './component-communication/child.component';
+import { ViewChildComm } from './component-communication/viewchild.component';
 
 @NgModule({
   // will have Component, Pipe or Directive
@@ -28,7 +29,8 @@ import { childComm } from './component-communication/child.component';
     modelFormComponent,
     StudentComponentServ,
     parentComm,
-    childComm
+    childComm,
+    ViewChildComm
   ],
   // will have Modules only
   imports: [
