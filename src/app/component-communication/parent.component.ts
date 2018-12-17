@@ -7,4 +7,12 @@ import { Component } from '@angular/core';
 
 export class parentComm{
     title='In parent';
+    myOrg="Cuelogic";
+
+    public myCurrentOrg;
+
+    receiveInfo(data){
+        alert(data);
+        this.myCurrentOrg=data;
+    }
 }

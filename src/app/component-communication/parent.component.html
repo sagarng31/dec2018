@@ -1,5 +1,10 @@
 <div class="container">
     <h1>{{title}}</h1>
+    <h3>My current organization is {{myCurrentOrg}}</h3>
+    <hr>
+    <!-- <child-comp [name1]="'Sagar Patil, Pune'"></child-comp> -->
+    <child-comp [name1]="myOrg" (send)="receiveInfo($event)"></child-comp>
+    <hr>
 </div>
 
 
