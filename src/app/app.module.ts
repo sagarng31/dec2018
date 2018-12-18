@@ -16,6 +16,11 @@ import { parentComm } from './component-communication/parent.component';
 import { childComm } from './component-communication/child.component';
 import { ViewChildComm } from './component-communication/viewchild.component';
 import { RouterModule } from '@angular/router';
+import { myRoutes } from './routing/route.config';
+import { HomeComponent } from './routing/home.component';
+import { AboutComponent } from './routing/about.component';
+import { ContactComponent } from './routing/contact.component';
+import { MainComponent } from './routing/main.component';
 
 @NgModule({
   // will have Component, Pipe or Directive
@@ -31,7 +36,11 @@ import { RouterModule } from '@angular/router';
     StudentComponentServ,
     parentComm,
     childComm,
-    ViewChildComm
+    ViewChildComm,
+    HomeComponent,
+    AboutComponent,
+    ContactComponent,
+    MainComponent
   ],
   // will have Modules only
   imports: [
@@ -39,10 +48,10 @@ import { RouterModule } from '@angular/router';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    RouterModule
+    RouterModule.forRoot(myRoutes)
   ],
   // will have services only
   providers: [],
-  bootstrap: [parentComm]
+  bootstrap: [MainComponent]
 })
 export class AppModule { }
