@@ -15,6 +15,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { parentComm } from './component-communication/parent.component';
 import { childComm } from './component-communication/child.component';
 import { ViewChildComm } from './component-communication/viewchild.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   // will have Component, Pipe or Directive
@@ -37,7 +38,8 @@ import { ViewChildComm } from './component-communication/viewchild.component';
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    RouterModule
   ],
   // will have services only
   providers: [],
