@@ -21,6 +21,7 @@ import { HomeComponent } from './routing/home.component';
 import { AboutComponent } from './routing/about.component';
 import { ContactComponent } from './routing/contact.component';
 import { MainComponent } from './routing/main.component';
+import { VisionComponent } from './routing/vision.component';
 
 @NgModule({
   // will have Component, Pipe or Directive
@@ -40,7 +41,8 @@ import { MainComponent } from './routing/main.component';
     HomeComponent,
     AboutComponent,
     ContactComponent,
-    MainComponent
+    MainComponent,
+    VisionComponent
   ],
   // will have Modules only
   imports: [
