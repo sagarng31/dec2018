@@ -22,6 +22,7 @@ import { AboutComponent } from './routing/about.component';
 import { ContactComponent } from './routing/contact.component';
 import { MainComponent } from './routing/main.component';
 import { VisionComponent } from './routing/vision.component';
+import { RouteGaurdService } from './routing/routegaurd.service';
 
 @NgModule({
   // will have Component, Pipe or Directive
@@ -53,7 +54,7 @@ import { VisionComponent } from './routing/vision.component';
     RouterModule.forRoot(myRoutes)
   ],
   // will have services only
-  providers: [],
+  providers: [RouteGaurdService],
   bootstrap: [MainComponent]
 })
 export class AppModule { }

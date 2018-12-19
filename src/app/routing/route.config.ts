@@ -3,6 +3,7 @@ import { HomeComponent } from './home.component';
 import { AboutComponent } from './about.component';
 import { ContactComponent } from './contact.component';
 import { VisionComponent } from './vision.component';
+import { RouteGaurdService } from './routegaurd.service';
 
 export const myRoutes:Routes = [
     {path:'', component:HomeComponent},
@@ -10,6 +11,6 @@ export const myRoutes:Routes = [
     children:[
         {path:'vision', component:VisionComponent}
     ]},
-    {path:'contact', component:ContactComponent}
+    {path:'contact', component:ContactComponent, canActivate:[RouteGaurdService]}
 ]
 
