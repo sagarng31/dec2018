@@ -7,7 +7,7 @@ import { RouteGaurdService } from './routegaurd.service';
 
 export const myRoutes:Routes = [
     {path:'', component:HomeComponent},
-    {path:'about', component:AboutComponent,
+    {path:'about', component:AboutComponent, canActivateChild:[RouteGaurdService],
     children:[
         {path:'vision', component:VisionComponent}
     ]},
